@@ -1,0 +1,413 @@
+/* Custom Styles */
+/* Header */
+/* Base Navbar Styles */
+.navbar-custom {
+    color: white;
+    height: 90px; /* Default height */
+    transition: all 0.3s ease-in-out; /* Smooth transition */
+    z-index: 1000;
+    position: fixed; /* Sticky navbar */
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    background-color: transparent; /* Default transparent background */
+    box-shadow: none;
+    margin: 0; /* Remove any default margins */
+    padding: 0; /* Remove unwanted padding */
+}
+
+/* Shrink Navbar on Scroll */
+.navbar-custom.shrink {
+    background-color: white; /* Solid background on scroll */
+    height: 60px; /* Reduced height */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add slight shadow */
+}
+
+/* Navbar Brand Image */
+.navbar-custom img {
+    height: 80px; /* Default logo size */
+    margin-right: 20px;
+    transition: height 0.3s ease-in-out;
+}
+
+.navbar-custom.shrink img {
+    height: 50px; /* Smaller logo when scrolled */
+}
+
+/* Navbar Links */
+.navbar-custom .nav-link {
+    color: black;
+    margin: 0 15px; /* Spacing between links */
+    font-size: 18px;
+    font-weight: 500;
+    transition: color 0.3s ease-in-out;
+}
+
+.navbar-custom .nav-link:hover {
+    color: #007bff; /* Hover effect */
+}
+
+.navbar-custom.shrink .nav-link {
+    font-size: 16px; /* Reduce font size on scroll */
+}
+
+/* Navbar Collapse Menu */
+.navbar-custom .navbar-collapse {
+    background-color: white; /* White background for dropdown menu */
+    padding: 0; /* Remove padding */
+    margin: 0;
+}
+
+.navbar-custom .navbar-collapse .nav-item {
+    margin: 0; /* Remove extra margin for dropdown links */
+    text-align: center;
+}
+
+/* Navbar Toggler Icon */
+.navbar-custom .navbar-toggler {
+    border: none;
+    outline: none;
+    transition: all 0.3s ease-in-out;
+}
+
+.navbar-custom .navbar-toggler-icon {
+    background-color: black; /* Adjust icon color */
+}
+
+/* Fix White Space Issue */
+html, body {
+    margin: 0; /* Remove browser default margin */
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+/* Adjust Body Padding for Navbar */
+body {
+    padding-top: 90px; /* Matches navbar height */
+}
+
+body.shrink-navbar {
+    padding-top: 60px; /* Adjust for smaller navbar */
+}
+
+/* Prevent Extra Space Below Navbar */
+header {
+    margin: 0;
+    padding: 0;
+    line-height: 0; /* Fixes any space caused by line-height */
+}
+
+/* Utility to Remove Extra Space */
+.navbar-custom::after {
+    content: "";
+    display: block;
+    height: 0;
+    clear: both;
+}
+
+/* About Section */
+/* Ensure the carousel image covers the screen */
+.carousel-item {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    height: 100vh; /* Full screen */
+    padding: 0; /* No padding */
+}
+
+/* Overlay styling for better visibility of text - covers entire screen */
+.carousel-item .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: auto;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Dark overlay */
+}
+
+/* Styling for the text inside the carousel */
+.carousel-item h1 {
+    font-size: 4.5rem; /* Large font size */
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    line-height: 1.2;
+    z-index: 1;
+    margin-bottom: 20px;
+}
+
+.carousel-item p {
+    font-size: 1.5rem;
+    font-weight: 200;
+    letter-spacing: 0.5px;
+    z-index: 1;
+    max-width: 800px;
+    margin: 0 auto 20px;
+}
+
+/* Center text and structure */
+.carousel-item .row {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+}
+
+/* Controls - Arrowheads */
+/* Controls - Arrowheads */
+.carousel-control-prev-icon, .carousel-control-next-icon {
+    background-color: transparent; /* No background color */
+    border: none;                  /* No border */
+    box-shadow: none;              /* No shadow */
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);   /* Vertically center the arrows */
+    z-index: 10;                   /* Ensure the arrows are on top */
+    width: 50px;                   /* Set larger arrow size */
+    height: 50px;                  /* Set larger arrow size */
+    background-size: 50px 50px;    /* Ensure the arrow icon fits correctly */
+    background-position: center;  /* Center the icon */
+}
+
+/* Left Arrow Icon */
+.carousel-control-prev-icon {
+    background-image: url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2250%22 height=%2250%22 viewBox=%220 0 24 24%22%3E%3Cpath fill=%22%23ffffff%22 d=%22M14 7l-5 5 5 5V7z%22/%3E%3C/svg%3E'); /* Left arrow icon in white */
+}
+
+/* Right Arrow Icon */
+.carousel-control-next-icon {
+    background-image: url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2250%22 height=%2250%22 viewBox=%220 0 24 24%22%3E%3Cpath fill=%22%23ffffff%22 d=%22M10 7l5 5-5 5V7z%22/%3E%3C/svg%3E'); /* Right arrow icon in white */
+}
+
+/* Positioning the arrows */
+.carousel-control-prev {
+    left: 20px;                    /* Move the previous arrow slightly in from the edge */
+}
+
+.carousel-control-next {
+    right: 20px;                   /* Move the next arrow slightly in from the edge */
+}
+
+
+
+/* Styling for the <li> tags */
+.carousel-item ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.carousel-item li {
+    font-size: 1.25rem;
+    font-weight: 400;
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+/* Adjust the text for mobile screens */
+@media (max-width: 768px) {
+    .carousel-item h1 {
+        font-size: 2.5rem;
+    }
+
+    .carousel-item p {
+        font-size: 1rem;
+    }
+    .lead {
+        font-size: 1.5rem; /* Adjust text size on small screens */
+    }
+
+    /* Adjust <li> font size for mobile */
+    .carousel-item li {
+        font-size: 1.1rem;
+    }
+}
+
+/* content Section */
+/* Styled Text Box */
+.styled-text-box {
+    background-color: #fff; /* White background */
+    padding: 20px;
+    border-radius: 12px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+    width: 80%; /* Adjust width as needed */
+    max-width: 1000px; /* Max width */
+    margin: 30px auto; /* Center align */
+    font-family: 'Arial', sans-serif; /* Font styling */
+    color: #333; /* Dark text color */
+  }
+  
+  /* Text Styling */
+  .styled-text-box p {
+    font-size: 20px; /* Font size */
+    line-height: 1.6; /* Line height for readability */
+    color: #555; /* Slightly lighter color for text */
+    margin-bottom: 15px; /* Spacing between paragraphs */
+  }
+  
+  /* Optional: Add a border or more styling */
+  .styled-text-box {
+    border: 2px solid #ddd; /* Optional border */
+  }
+  
+  /* Optional: Add a title style */
+  .styled-text-box h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #2d2d2d;
+    text-align: center;
+  }
+  
+/* Main Section */
+
+#services {
+    background-color: #f9f9f9; /* Light background for the section */
+    padding: 40px 20px; /* Top and bottom spacing */
+}
+
+#services h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: black;
+}
+
+#services .row {
+    display: flex; /* Use Flexbox for alignment */
+    justify-content: center; /* Center items horizontally */
+    flex-wrap: wrap; /* Wrap to next line if needed */
+    gap: 40px; /* Proper spacing between items */
+}
+
+#services .col-md-2 {
+    text-align: center; /* Center align text and image */
+}
+
+#services .service-img {
+    width: 120px; /* Consistent image width */
+    height: 120px; /* Consistent image height */
+    object-fit: contain; /* Maintain image proportions */
+    background-color: #ffffff; /* White background for images */
+    border-radius: 15px; /* Rounded corners */
+    padding: 15px; /* Space inside the image box */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle default shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth scaling and shadow */
+}
+
+#services .service-img:hover {
+    transform: scale(1.2); /* Pop-out effect */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Enhanced shadow */
+    cursor: pointer; /* Indicate interactivity */
+}
+
+#services .service-title {
+    margin-top: 10px; /* Space between image and title */
+    font-size: 1rem;
+    font-weight: 500;
+    color: #333;
+}
+ 
+
+/* other sections*/
+#other-sections {
+    background-color: #f9f9f9; /* Light background */
+    padding: 40px 20px; /* Top and bottom padding */
+}
+
+#other-sections h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+#other-sections .row {
+    display: flex;
+    justify-content: center; /* Center buttons horizontally */
+    flex-wrap: wrap; /* Allow wrapping if necessary */
+    gap: 20px; /* Proper spacing between buttons */
+}
+
+#other-sections .col-md-4 {
+    text-align: center;
+}
+
+#other-sections button {
+    width: 200px; /* Consistent button width */
+    padding: 15px;
+    font-size: 1.1rem;
+    background-color: #33cd6e; /* Blue background */
+    color: white;
+    border: none;
+    border-radius: 10px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+}
+
+#other-sections button:hover {
+    transform: scale(1.1); /* Pop-up effect */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Shadow effect */
+}
+
+#other-sections h4 {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #555;
+    margin-top: 30px;
+}
+
+/* Footer */
+footer a {
+    text-decoration: none;
+    color: #fff;
+}
+
+/* Form Styles */
+#contactForm input, #contactForm textarea {
+    margin-bottom: 15px;
+}
+
+/* Background styling */
+
+/* About Section Carousel */
+.carousel-item {
+    background-color: #a8dadc; /* Light Sky Blue - symbolizes a clear sky */
+}
+
+.carousel-item .overlay {
+    background: rgba(0, 0, 0, 0.4); /* Slightly darker for better text visibility */
+}
+
+/* Styled Text Box */
+.styled-text-box {
+    background-color: #fef2ea; /* Light Sand - represents the earth */
+    border: 2px solid #2d2d2d; /* Subtle border to enhance the natural look */
+}
+
+/* Services Section */
+#services {
+    background-color: #d9ed92; /* Light Green - symbolizes environmental growth */
+}
+/* Other Sections */
+#other-sections {
+    background-color: #ffffff; /* Soft Green - represents natural landscapes */
+}
+
+/* Button Styles */
+#other-sections button {
+    background-color: #923c36; /* Teal - symbolizes water, fresh nature */
+}
+
+#other-sections h4 {
+    color: #264653; /* Darker Green - represents earth and forests */
+}
+/* Footer */
+footer {
+    background-color: #6b4226; /* Earthy Brown - represents the soil and natural roots */
+}
+footer a {
+    color: #fff; /* White text for good contrast */
+}
+/* Contact Form */
+#contact{
+    background-color: #d4f8e0; /* Pastel Green - symbolizes calm nature */
+}
